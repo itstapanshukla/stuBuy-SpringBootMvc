@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Nov, 2019, 8:26:01 PM
+    Author     : nafees
+*/
+
+                    /*Resetting*/
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+                    /*Global*/
+body {
+   
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif !important;
+}
+
+
+.body_section{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headings{
+    display: flex;
+    width: 100%;
+   align-items: center;
+    margin-bottom: 30px;
+}
+
+.headings p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.body_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.body_container .textbox{
+    border: 1px solid #663399;
+    width: 100%;
+    border-radius: 4px;
+    height: 2rem;
+    padding-left: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+
+.body_container .desc_box{
+    border: 1px solid #663399;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.caption{
+    text-transform:uppercase;
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.button{
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
+    margin-top: 20px;
+    background-color: #663399;
+    color: #fff;
+    border: 0px;
+}
+/*
+.submit_button:hover{
+    border: 2px solid #663399; 
+    background-color: transparent;
+    color: #663399;
+}
+
+.form_container p{ 
+    margin-top: 10px;
+}
+.form_container a:hover{ 
+    text-decoration: none;
+    color: blue;
+}
