@@ -11,8 +11,8 @@ import javax.persistence.Table;
 public class UserDetails {
 
 	@Id
-	private String userphone;
 	private String useremail;
+	private String userphone;
 	private String items;
 	private String transactionId;
 

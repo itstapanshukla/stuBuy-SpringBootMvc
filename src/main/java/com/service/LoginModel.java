@@ -11,7 +11,7 @@ public class LoginModel {
 	private DataBaseServices services;
 
 	public LoginAccount login(LoginAccount account) {
-		LoginAccount login = services.getData(account.getUserphone());
+		LoginAccount login = services.getData(account.getUseremail());
 		if (login == null) {
 			return null;
 		}

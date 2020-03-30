@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class LoginAccount {
 
 	@Id
-	private String userphone;
+	private String useremail;
 	private String password;
 	private String username;
 
@@ -20,6 +20,14 @@ public class LoginAccount {
 
 	public List<UserDetails> getUser_details() {
 		return user_details;
+	}
+
+	public String getUseremail() {
+		return useremail;
+	}
+
+	public void setUseremail(String useremail) {
+		this.useremail = useremail;
 	}
 
 	public void setUser_details(List<UserDetails> user_details) {
@@ -32,14 +40,6 @@ public class LoginAccount {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getUserphone() {
-		return userphone;
-	}
-
-	public void setUserphone(String userphone2) {
-		this.userphone = userphone2;
 	}
 
 	public String getUsername() {

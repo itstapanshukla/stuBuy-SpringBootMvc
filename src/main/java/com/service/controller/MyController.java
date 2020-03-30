@@ -1,5 +1,6 @@
 package com.service.controller;
 
+import javax.mail.MessagingException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.service.DataBaseServices;
 import com.service.LoginModel;
 import com.service.accountdetails.LoginAccount;
+import com.service.mailservices.MailSenderUtility;
 
 @Controller
 @RequestMapping(value = "/account")
@@ -23,16 +25,19 @@ public class MyController {
 	@Autowired
 	private LoginModel login;
 
+	@Autowired
+	private MailSenderUtility mailSender;
+
 	@GetMapping("/home")
 	public String homePage(Model andView) {
 		return "homepage";
 	}
 
 	@PostMapping("/login")
-	public String myPage(@RequestParam("userphone") String userphone, @RequestParam("password") String password,
+	public String myPage(@RequestParam("useremail") String useremail, @RequestParam("password") String password,
 			Model andView) {
 		LoginAccount account = new LoginAccount();
-		account.setUserphone(userphone);
+		account.setUseremail(useremail);
 		account.setPassword(password);
 		if (login.login(account) != null) {
 			account = login.login(account);
@@ -44,14 +49,15 @@ public class MyController {
 	}
 
 	@PostMapping("/signup")
-	public String signUp(@RequestParam("userphone") String userphone, @RequestParam("password") String password,
-			@RequestParam("username") String username, Model model) {
-		System.out.println(userphone + " " + password);
+	public String signUp(@RequestParam("useremail") String useremail, @RequestParam("password") String password,
+			@RequestParam("username") String username, Model model) throws MessagingException {
+
 		LoginAccount account = new LoginAccount();
-		account.setUserphone(userphone);
+		account.setUseremail(useremail);
 		account.setPassword(password);
 		account.setUsername(username);
 		login.createAccount(account);
+		mailSender.sendEmail(account.getUsername(), account.getUseremail());
 		return "homepage";
 	}
 

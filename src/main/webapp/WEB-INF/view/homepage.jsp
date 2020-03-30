@@ -242,7 +242,7 @@
 									<br> <label for="email">UserId</label> <input
 										class="form-control" id="eid"
 										onblur="loginVerify('eid', 'sid')" type="text"
-										name="userphone" placeholder="userid"><span id="sid"></span><br>
+										name="useremail" placeholder="userid"><span id="sid"></span><br>
 									<label for="pwd">Password</label> <input class="form-control"
 										id="ppid" type="password" name="password"
 										placeholder="password"><br>
@@ -282,7 +282,7 @@
 							</div>
 							<div class="modal-body">
 								<form action="/account/signup" method="post">
-									<input class="form-control" type="text" name="userphone"
+									<input class="form-control" type="text" name="useremail"
 										placeholder="userid" id="eeid"
 										onblur="aCaller('eeid', 'errid')"> <span id="errid"></span><br>
 									</li>
