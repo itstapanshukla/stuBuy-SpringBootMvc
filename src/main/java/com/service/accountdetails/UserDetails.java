@@ -12,12 +12,10 @@ public class UserDetails {
 
 	@Id
 	private String useremail;
-	private String userphone;
 	private String items;
 	private String transactionId;
 
 	@ManyToOne
-	@JoinColumn(name = "login_account_userphone")
 	private LoginAccount account;
 
 	public LoginAccount getAccount() {
@@ -26,14 +24,6 @@ public class UserDetails {
 
 	public void setAccount(LoginAccount account) {
 		this.account = account;
-	}
-
-	public String getUserphone() {
-		return userphone;
-	}
-
-	public void setUserphone(String userphone) {
-		this.userphone = userphone;
 	}
 
 	public String getItems() {

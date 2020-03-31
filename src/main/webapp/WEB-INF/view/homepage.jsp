@@ -93,8 +93,7 @@
 									href="fc/?page=homepage_1&type=view">your Account</a></li>
 								<li style="padding: 10px;"><a
 									href="fc/?page=Logout&type=model">your Orders</a></li>
-								<li style="padding: 10px;"><a
-									href="fc/?page=Logout&type=model">logout</a></li>
+								<li style="padding: 10px;"><a href="/account/logout">logout</a></li>
 							</ul>
 
 						</li>
@@ -286,6 +285,10 @@
 										placeholder="userid" id="eeid"
 										onblur="aCaller('eeid', 'errid')"> <span id="errid"></span><br>
 									</li>
+									<li style="list-style: none;"><input class="form-control"
+										type="text" placeholder="Userphone" id="pid"
+										onblur="validator('pid', 'errorpid')" name="userphone">
+										<span id="errorpid"></span><br></li>
 									<li style="list-style: none;"><input class="form-control"
 										type="password" placeholder="Password" id="pid"
 										onblur="validator('pid', 'errorpid')" name="password">

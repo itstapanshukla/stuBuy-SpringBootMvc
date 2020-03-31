@@ -14,6 +14,7 @@ public class LoginAccount {
 	private String useremail;
 	private String password;
 	private String username;
+	private String userphone;
 
 	@OneToMany(mappedBy = "account")
 	private List<UserDetails> user_details;
@@ -48,6 +49,14 @@ public class LoginAccount {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getUserphone() {
+		return userphone;
+	}
+
+	public void setUserphone(String userphone) {
+		this.userphone = userphone;
 	}
 
 }
