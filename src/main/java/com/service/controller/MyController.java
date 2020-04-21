@@ -17,7 +17,7 @@ import com.service.accountdetails.LoginAccount;
 import com.service.mailservices.MailSenderUtility;
 
 @Controller
-@RequestMapping(value = "*/")
+@RequestMapping(value = "/account")
 public class MyController {
 
 	@Autowired
@@ -66,6 +66,18 @@ public class MyController {
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "homepage";
+
+	}
+
+	@GetMapping("/forget")
+	public String forgetPassword() {
+		return "forgetpassword";
+
+	}
+
+	@GetMapping("/userpage")
+	public String userHomePage() {
+		return "userpage";
 
 	}
 }

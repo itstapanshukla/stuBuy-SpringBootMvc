@@ -45,7 +45,7 @@
 
 		<a class="navbar-brand"
 			style="color: #efefef; font-family: fantasy; font-size: 20px;"
-			href="/E-Commerce/fc/?page=login&type=view"><strong>stuBuy</strong></a>
+			href="/account/home"><strong>stuBuy</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@
 								data-toggle="dropdown">${user.username}</button>
 							<ul class="dropdown-menu ml-auto" style="list-style-type: none;">
 								<li style="padding: 10px;"><a
-									href="fc/?page=homepage_1&type=view">your Account</a></li>
+									href="/account/userpage">your Account</a></li>
 								<li style="padding: 10px;"><a
 									href="fc/?page=Logout&type=model">your Orders</a></li>
 								<li style="padding: 10px;"><a href="/account/logout">logout</a></li>
@@ -252,7 +252,7 @@
 									</div>
 									<input type="submit" value="login"
 										onsubmit="loginVerify('eid', 'ppid')" class="btn btn-primary">
-									<a href="fc/?page=forgetpassword&type=view">forget password
+									<a href="/account/forget">forget password
 										?</a>
 								</form>
 							</div>
