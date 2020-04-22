@@ -102,126 +102,34 @@
 		<div class="row">
 
 
-			<!-- 			<div class=" col-lg-2 col-md-3 col-sm-3 col-4" -->
-			<!-- 				style="list-style-type: none;"> -->
-
-			<!-- 				<li class="dropdown" style="padding-top: 10px;"> -->
-			<!-- 					<button class="btn btn-default dropdown-toggle pe-7s-user" -->
-			<!-- 						type="button" data-toggle="dropdown"> -->
-			<!-- 						Electronics <span class="caret"></span> -->
-			<!-- 					</button> -->
-			<!-- 					<ul class="dropdown-menu ml-auto"> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=homepage_1&type=view">Mobiles</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Mobile Accessories</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Laptops</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Speakers</a></li> -->
-			<!-- 					</ul> -->
-
-			<!-- 				</li> -->
-
-			<!-- 			</div> -->
-			<!-- 			<div class="col-lg-2 col-md-3 col-sm-3 col-4" -->
-			<!-- 				style="padding-top: 10px;"> -->
-			<!-- 				<li class="dropdown" style="list-style-type: none;"> -->
-			<!-- 					<button class="btn btn-default dropdown-toggle pe-7s-user" -->
-			<!-- 						type="button" data-toggle="dropdown"> -->
-			<!-- 						Men <span class="caret"></span> -->
-			<!-- 					</button> -->
-			<!-- 					<ul class="dropdown-menu ml-auto" style="list-style-type: none;"> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=homepage_1&type=view">FootWear</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Clothing</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Watches</a></li> -->
-			<!-- 						<li style="padding: 10px;"><a -->
-			<!-- 							href="fc/?page=Logout&type=model">Sports</a></li> -->
-			<!-- 					</ul> -->
-
-			<!-- 				</li> -->
-
-
-			<!-- 			</div> -->
-			<!-- 			<div class="col-lg-2 col-md-3 col-sm-3 col-4" -->
-			<!-- 				style="padding-top: 10px;" -->
-			<%-- 				style="list-style-type:none;> --%>
-			<!--                      <li class="dropdown"> -->
-			<!--                      <button class="btn btn-default dropdown-toggle pe-7s-user" type="button"  data-toggle="dropdown">Women -->
-			<!--                         <span class="caret"></span></button> -->
-			<!--                     <ul class="dropdown-menu ml-auto" > -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=homepage_1&type=view">FootWear</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=Logout&type=model">Clothing</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=homepage_1&type=view">Sports Wear</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=Logout&type=model">Watches</a></li> -->
-			<!--                     </ul> -->
-			<!--                     </li> -->
-			<!--                 </div> -->
-			<%--                 <div class="col-lg-2 col-md-3 col-sm-3 col-4"style="padding-top: 10px;" style="list-style-type:none;> --%>
-
-			<!--                      <li class="dropdown"> -->
-			<!--                      <button class="btn btn-default dropdown-toggle pe-7s-user" type="button"  data-toggle="dropdown">Sports -->
-			<!--                         <span class="caret"></span></button> -->
-			<!--                     <ul class="dropdown-menu ml-auto" > -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=homepage_1&type=view">My Account</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=Logout&type=model">logout</a></li> -->
-			<!--                     </ul> -->
-
-			<!--                     </li> -->
-
-			<!--                 </div> -->
-			<%--                 <div class="col-lg-2 col-md-3 col-sm-3 col-4"style="padding-top: 10px;"style="list-style-type:none;> --%>
-			<!--                      <li class="dropdown"> -->
-			<!--                      <button class="btn btn-default dropdown-toggle pe-7s-user" type="button"  data-toggle="dropdown">offer zone -->
-			<!--                         <span class="caret"></span></button> -->
-			<!--                     <ul class="dropdown-menu ml-auto" > -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=homepage_1&type=view">My Account</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=Logout&type=model">logout</a></li> -->
-			<!--                     </ul> -->
-			<!--                     </li> -->
-			<!--                 </div> -->
-			<%--                 <div class="col-lg-2 col-md-3 col-sm-3 col-4"style="padding-top: 10px;"style="list-style-type:none;> --%>
-
-			<!--                      <li class="dropdown"> -->
-			<!--                      <button class="btn btn-default dropdown-toggle pe-7s-user" type="button"  data-toggle="dropdown">About us -->
-			<!--                         <span class="caret"></span></button> -->
-			<!--                     <ul class="dropdown-menu ml-auto" > -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=homepage_1&type=view">My Account</a></li> -->
-			<!--                         <li style="padding: 10px;"><a href="fc/?page=Logout&type=model">logout</a></li> -->
-			<!--                     </ul> -->
-
-			<!--                     </li> -->
-
-			<!--                 </div> -->
-
-
-
-			<!--             </div> -->
-			<!--         </div>         -->
-
-
 
 			<c:if test="${empty user}">
 				<div class="modal-body">
 					<p>First Login Your Account</p>
 					<form action="/account/login" method="post">
-						<br> <label for="email">UserId</label> <input
-							class="form-control" id="eid" onblur="loginVerify('eid', 'sid')"
-							type="text" name="useremail" placeholder="userid"><span
-							id="sid"></span><br> <label for="pwd">Password</label> <input
-							class="form-control" id="ppid" type="password" name="password"
-							placeholder="password"><br>
-						<div class="form-group form-check">
-							<label class="form-check-label"> <input
-								class="form-check-input" type="checkbox"> Remember me
-							</label>
+						<p class="hint-text">Sign in with your social media account</p>
+						<div class="form-group social-btn clearfix">
+							<a href="#" class="btn btn-primary pull-left"><i
+								class="fa fa-facebook"></i> Facebook</a> <a href="facebook.com"
+								class="btn btn-info pull-right"><i class="fa fa-twitter"></i>
+								Twitter</a>
 						</div>
-						<input type="submit" value="login"
-							onsubmit="loginVerify('eid', 'ppid')" class="btn btn-primary">
-						<a href="fc/?page=forgetpassword&type=view">forget password ?</a>
+						<div class="or-seperator">
+							<b>or</b>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" name="useremail"
+								placeholder="userID">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" name="password"
+								placeholder="password">
+						</div>
+						<input type="submit" class="btn btn-primary btn-block"
+							value="Login">
+						<div class="form-footer">
+							<a href="/account/forget">Forgot Your password?</a>
+						</div>
 					</form>
 
 
@@ -346,47 +254,41 @@
 							<button type="button" class="btn btn-primary btn-lg"
 								style="float: left">Registration</button>
 
-
-
 						</div>
 						<div class="modal-body">
 							<form action="/account/signup" method="post">
-								<input class="form-control" type="text" name="useremail"
-									placeholder="userid" id="eeid"
-									onblur="aCaller('eeid', 'errid')"> <span id="errid"></span><br>
-								</li>
-								<li style="list-style: none;"><input class="form-control"
-									type="text" placeholder="Userphone" id="pid"
-									onblur="validator('pid', 'errorpid')" name="userphone">
-									<span id="errorpid"></span><br></li>
-								<li style="list-style: none;"><input class="form-control"
-									type="password" placeholder="Password" id="pid"
-									onblur="validator('pid', 'errorpid')" name="password">
-									<span id="errorpid"></span><br></li>
-								<li style="list-style: none;"><input class="form-control"
-									type="password" placeholder="Re-Password" id="pid"
-									onblur="validator('pid', 'errorpid')" name="password2">
-									<span id="errorpid"></span><br></li>
-								<li style="list-style: none;"><input class="form-control"
-									type="text" placeholder="Full Name" name="username" id="fname"
-									onblur="validator('fname', 'errorfname')"><span
-									id="errorfname"></span><br></li>
-								<!-- 									<li style="list-style: none;"><input class="form-control" -->
-								<!-- 										type="text" placeholder="Last Name" id="lname" name="lname" -->
-								<!-- 										onblur="validator('lname', 'errorlname')"><span -->
-								<!-- 										id="errorlname"></span><br></li> -->
-								<!-- 									<li style="list-style: none;"><input class="form-control" -->
-								<!-- 										type="text" placeholder="Phone" id="phoneid" -->
-								<!-- 	id="errorphoneid"></span><br>									onblur="validator('phoneid', 'errorphoneid')" name="phone"><span -->
+								<p class="hint-text">Fill in this form to create your
+									account!</p>
+								<div class="form-group">
+									<input type="text" name="useremail" placeholder="userid"
+										id="eeid" onblur="aCaller('eeid', 'errid')">
+								</div>
+								<div class="form-group">
+									<input type="text" placeholder="Userphone" id="pid"
+										onblur="validator('pid', 'errorpid')" name="userphone">
+								</div>
+								<div class="form-group">
+									<input type="password" placeholder="Password" id="pid"
+										onblur="validator('pid', 'errorpid')" name="password">
+								</div>
 
-								</li>
-								<!--    <select name="city">
-                                                <option value="1">Zamania</option
-                                                <option value="2">Lucknow</option>
-                                                <option value="3">Varanasi</option>
-    
-                                            </select> -->
-								<input class="btn btn-info" type="submit" value="register">
+								<div class="form-group">
+									<input type="password" placeholder="Re-Password" id="pid"
+										onblur="validator('pid', 'errorpid')" name="password2">>
+								</div>
+
+								<div class="form-group">
+									<input type="text" placeholder="Full Name" name="username"
+										id="fname" onblur="validator('fname', 'errorfname')">
+								</div>
+
+								<div class="form-group">
+									<label class="checkbox-inline"><input type="checkbox"
+										required="required"> I accept the <a href="#">Terms
+											&amp; Conditions</a></label>
+								</div>
+								<input type="submit" class="btn btn-primary btn-block"
+									value="Sign up">
 							</form>
 
 
@@ -399,48 +301,5 @@
 
 				</div>
 			</div>
-			<!--     <footer id="footer">
-                 <div class="footer-top">
-                     <div class="container">
-                         <div class="row">
-                             <div class="col-lg-3 col-md-3 col-sm-3 footer-info"> <br><br>
-                                 <h3>LEND-A-HAND</h3>
-                                 <p> Its an e- Commerse Website created for the students where they can buy new as well as used products which are being sold by other Students</p>
-                             </div>
-                             <div class="col-lg-3 col-md-3 col-sm-3 footer-links"><br><br>
-                                 <h4> Usefull Links</h4>
-                                 <ul>
-                                     <li><a href="#">Link</a></li>
-                                     <li><a href="#">Link</a></li>
-        
-                                 </ul>
-                             </div>
-                             <div class="col-lg-3 col-md-3 col-sm-3 footer-contact"><br><br>
-                                 <h4>Contact Us</h4>
-                                 <p>
-                                     Integral University<br/>
-                                     Kursi Road, Lucknow<br/>
-                                     India<br/>
-                                     <strong>Phone: +916393545132</strong><br/>
-                                     <strong>Email: contact.nafees12@gmail.com</strong><br/>
-                                 </p>
-        
-                             </div>
-                             <div class="col-lg-3 col-md-3 col-sm-3 footer-newsletter"><br><br>
-                                 <h4>Our Newsletter</h4>
-                                 <p>  ---------------------------------------------------------------------------------</p>
-                                 <form accept="" method="post">
-                                     <input type="email" name="email"><input type="submit" value="Subscribe"></form>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-        
-             </footer>  -->
-
-
-
-
-			<!--       Account   login section          -->
 </body>
 </html>

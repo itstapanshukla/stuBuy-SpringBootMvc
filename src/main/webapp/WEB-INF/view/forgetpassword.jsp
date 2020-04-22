@@ -73,22 +73,30 @@
 
 				<!-- Modal body -->
 				<div class="modal-body">
-					<form action="fc/?page=Login&type=model" method="post">
-						<br> <label for="email">Email</label> <input
-							class="form-control" id="eid" onblur="loginVerify('eid', 'sid')"
-							type="text" name="email" placeholder="username"><span
-							id="sid"></span><br> <label for="pwd">Password</label> <input
-							class="form-control" type="text" name="pass"
-							placeholder="password"><br>
-						<div class="form-group form-check">
-							<label class="form-check-label"> <input
-								class="form-check-input" type="checkbox"> Remember me
-							</label>
+					<form action="/account/login" method="post">
+						<p class="hint-text">Sign in with your social media account</p>
+						<div class="form-group social-btn clearfix">
+							<a href="#" class="btn btn-primary pull-left"><i
+								class="fa fa-facebook"></i> Facebook</a> <a href="facebook.com"
+								class="btn btn-info pull-right"><i class="fa fa-twitter"></i>
+								Twitter</a>
 						</div>
-						<input type="submit" name="login" class="btn btn-primary">
-						<a href="fc/?page=forgetpassword&type=view">forget password ?</a>
-
-
+						<div class="or-seperator">
+							<b>or</b>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" name="useremail"
+								placeholder="userID">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" name="password"
+								placeholder="password">
+						</div>
+						<input type="submit" class="btn btn-primary btn-block"
+							value="Login">
+						<div class="form-footer">
+							<a href="#">Forgot Your password?</a>
+						</div>
 					</form>
 
 
@@ -116,46 +124,29 @@
 
 				</div>
 				<div class="modal-body">
-					<form action="fc/?page=Registration&type=model" method="post">
-
-
-						<input class="form-control" type="text" name="email"
-							placeholder="Email" id="eid" onblur="aCaller('eid', 'errorid')">
-						<span id="errorid"></span><br>
+					<form action="/account/signup" method="post">
+						<input class="form-control" type="text" name="useremail"
+							placeholder="userid" id="eeid" onblur="aCaller('eeid', 'errid')">
+						<span id="errid"></span><br>
 						</li>
-
 						<li style="list-style: none;"><input class="form-control"
-							type="text" placeholder="Password" id="pid"
-							onblur="validator('pid', 'errorpid')" name="pass"> <span
+							type="text" placeholder="Userphone" id="pid"
+							onblur="validator('pid', 'errorpid')" name="userphone"> <span
 							id="errorpid"></span><br></li>
-
 						<li style="list-style: none;"><input class="form-control"
-							type="text" placeholder="First Name" name="fname" id="fname"
+							type="password" placeholder="Password" id="pid"
+							onblur="validator('pid', 'errorpid')" name="password"> <span
+							id="errorpid"></span><br></li>
+						<li style="list-style: none;"><input class="form-control"
+							type="password" placeholder="Re-Password" id="pid"
+							onblur="validator('pid', 'errorpid')" name="password2"> <span
+							id="errorpid"></span><br></li>
+						<li style="list-style: none;"><input class="form-control"
+							type="text" placeholder="Full Name" name="username" id="fname"
 							onblur="validator('fname', 'errorfname')"><span
-							id="errorfname"></span><br></li>
-
-						<li style="list-style: none;"><input class="form-control"
-							type="text" placeholder="Last Name" id="lname" name="lname"
-							onblur="validator('lname', 'errorlname')"><span
-							id="errorlname"></span><br></li>
-
-						<li style="list-style: none;"><input class="form-control"
-							type="text" placeholder="Phone" id="phoneid"
-							onblur="validator('phoneid', 'errorphoneid')" name="phone"><span
-							id="errorphoneid"></span><br></li>
-						<!--    <select name="city">
-                                    <option value="1">Zamania</option
-                                    <option value="2">Lucknow</option>
-                                    <option value="3">Varanasi</option>
-                                </select> -->
-
-						<input class="btn btn-info" type="submit" value="register">
-
-
-
-
+							id="errorfname"></span><br></li> <input class="btn btn-info"
+							type="submit" value="register">
 					</form>
-
 
 
 				</div>
@@ -189,45 +180,6 @@
 
 
 	</div>
-
-	<!--     <footer id="footer">
-                 <div class="footer-top">
-                     <div class="container">
-                         <div class="row">
-                             <div class="col-lg-4 col-md-6 footer-info"> <br><br>
-                                 <h3>LEND-A-HAND</h3>
-                                 <p> Its an e- Commerse Website created for the students where they can buy new as well as used products which are being sold by other Students</p>
-                             </div>
-                             <div class="col-lg-2 col-md-6 footer-links"><br><br>
-                                 <h4> Usefull Links</h4>
-                                 <ul>
-                                     <li><a href="#">Link</a></li>
-                                     <li><a href="#">Link</a></li>
-                                    
-                                 </ul>
-                             </div>
-                             <div class="col-lg-3 col-md-6 footer-contact"><br><br>
-                                 <h4>Contact Us</h4>
-                                 <p>
-                                     Integral University<br/>
-                                     Kursi Road, Lucknow<br/>
-                                     India<br/>
-                                     <strong>Phone: +916393545132</strong><br/>
-                                     <strong>Email: contact.nafees12@gmail.com</strong><br/>
-                                 </p>
-                                 
-                             </div>
-                             <div class="col-lg-3 col-md-6 footer-newsletter"><br><br>
-                                 <h4>Our Newsletter</h4>
-                                 <p>  ---------------------------------------------------------------------------------</p>
-                                 <form accept="" method="post">
-                                     <input type="email" name="email"><input type="submit" value="Subscribe"></form>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 
-             </footer>  -->
 
 </body>
 </html>

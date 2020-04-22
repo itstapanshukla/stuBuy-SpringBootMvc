@@ -45,7 +45,7 @@
 
 		<a class="navbar-brand"
 			style="color: #efefef; font-family: fantasy; font-size: 20px;"
-			href="/account/home"><strong>stuBuy</strong></a>
+			href="/E-Commerce/fc/?page=login&type=view"><strong>stuBuy</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
@@ -89,8 +89,8 @@
 							<button class="btn btn-primary dropdown-toggle" type="button"
 								data-toggle="dropdown">${user.username}</button>
 							<ul class="dropdown-menu ml-auto" style="list-style-type: none;">
-								<li style="padding: 10px;"><a href="/account/userpage">your
-										Account</a></li>
+								<li style="padding: 10px;"><a
+									href="fc/?page=homepage_1&type=view">your Account</a></li>
 								<li style="padding: 10px;"><a
 									href="fc/?page=Logout&type=model">your Orders</a></li>
 								<li style="padding: 10px;"><a href="/account/logout">logout</a></li>
@@ -238,31 +238,23 @@
 							<!-- Modal body -->
 							<div class="modal-body">
 								<form action="/account/login" method="post">
-									<p class="hint-text">Sign in with your social media account</p>
-									<div class="form-group social-btn clearfix">
-										<a href="#" class="btn btn-primary pull-left"><i
-											class="fa fa-facebook"></i> Facebook</a> <a href="facebook.com"
-											class="btn btn-info pull-right"><i class="fa fa-twitter"></i>
-											Twitter</a>
+									<br> <label for="email">UserId</label> <input
+										class="form-control" id="eid"
+										onblur="loginVerify('eid', 'sid')" type="text"
+										name="useremail" placeholder="userid"><span id="sid"></span><br>
+									<label for="pwd">Password</label> <input class="form-control"
+										id="ppid" type="password" name="password"
+										placeholder="password"><br>
+									<div class="form-group form-check">
+										<label class="form-check-label"> <input
+											class="form-check-input" type="checkbox"> Remember me
+										</label>
 									</div>
-									<div class="or-seperator">
-										<b>or</b>
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="text" name="useremail"
-											placeholder="userID">
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="text" name="password"
-											placeholder="password">
-									</div>
-									<input type="submit" class="btn btn-primary btn-block"
-										value="Login">
-									<div class="form-footer">
-										<a href="/account/forget">Forgot Your password?</a>
-									</div>
+									<input type="submit" value="login"
+										onsubmit="loginVerify('eid', 'ppid')" class="btn btn-primary">
+									<a href="fc/?page=forgetpassword&type=view">forget password
+										?</a>
 								</form>
-
 							</div>
 							<!-- Modal footer -->
 							<div class="modal-footer">
@@ -308,8 +300,23 @@
 									<li style="list-style: none;"><input class="form-control"
 										type="text" placeholder="Full Name" name="username" id="fname"
 										onblur="validator('fname', 'errorfname')"><span
-										id="errorfname"></span><br></li> <input class="btn btn-info"
-										type="submit" value="register">
+										id="errorfname"></span><br></li>
+									<!-- 									<li style="list-style: none;"><input class="form-control" -->
+									<!-- 										type="text" placeholder="Last Name" id="lname" name="lname" -->
+									<!-- 										onblur="validator('lname', 'errorlname')"><span -->
+									<!-- 										id="errorlname"></span><br></li> -->
+									<!-- 									<li style="list-style: none;"><input class="form-control" -->
+									<!-- 										type="text" placeholder="Phone" id="phoneid" -->
+									<!-- 	id="errorphoneid"></span><br>									onblur="validator('phoneid', 'errorphoneid')" name="phone"><span -->
+
+									</li>
+									<!--    <select name="city">
+                                                <option value="1">Zamania</option
+                                                <option value="2">Lucknow</option>
+                                                <option value="3">Varanasi</option>
+    
+                                            </select> -->
+									<input class="btn btn-info" type="submit" value="register">
 								</form>
 							</div>
 							<div class="modal-footer">
