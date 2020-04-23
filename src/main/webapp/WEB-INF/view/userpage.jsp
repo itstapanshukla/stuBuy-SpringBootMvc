@@ -1,18 +1,12 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8" session="true"%>
+<%@page import="java.util.*" contentType="text/html"
+	pageEncoding="UTF-8" session="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="org.springframework.ui.Model"%>
 <%@page import="com.service.accountdetails.LoginAccount"%>
-<%@page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<META Http-Equiv="Cache-Control" Content="no-cache">
-<META Http-Equiv="Pragma" Content="no-cache">
-<META Http-Equiv="Expires" Content="0">
 
 <title>stuBuy</title>
 
@@ -76,7 +70,6 @@
 							class="btn btn-primary btn-md navbar-toggle collapsed pull-left"
 							data-toggle="modal" data-target="#myModal">signup</button>
 					</c:if> <c:if test="${not empty user}">
-
 						<li class="dropdown">
 							<button class="btn btn-primary dropdown-toggle" type="button"
 								data-toggle="dropdown">${user.username}</button>
@@ -90,15 +83,12 @@
 							</ul>
 
 						</li></li>
-
 				</c:if>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container-fluid">
-
-
 		<div class="row">
 
 
@@ -218,7 +208,7 @@
 								</div>
 								<div style="margin-top: 20px;">
 									<strong style="color: #3333ff; font-size: 20px;">Email
-										Id :useremail</strong>
+										Id :${user.useremail}</strong>
 								</div>
 							</nav>
 						</div>
