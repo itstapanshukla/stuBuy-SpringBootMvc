@@ -10,10 +10,8 @@
 
 <title>stuBuy</title>
 
-<link href="/src/main/webapp/WEB-INF/CSS/LoginPage.css" rel="stylesheet"
-	type="text/css" />
-<link href="/src/main/webapp/WEB-INF/CSS/add_item.css" rel="stylesheet"
-	type="text/css" />
+<link href="/LoginPage.css" rel="stylesheet" type="text/css" />
+<link href="/add_item.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 

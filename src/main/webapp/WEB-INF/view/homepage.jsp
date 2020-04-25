@@ -7,13 +7,15 @@
 <html>
 <head>
 
-<title>stuBuy</title>
+<title>stuBuy icon</title>
+
+<link rel="icon" href="C:\Users\Nafees Abdullah\Desktop\images\icon.jpg"
+	type="image/x-icon">
 </head>
 <script src="/E-Commerce/JS/registration.js"></script>
 <script src="/E-Commerce/JS/loginjs.js"></script>
-
-<link href="webApp/src/main/webapp/WEB-INF/CSS/LoginPage.css"
-	rel="stylesheet" type="text/css" />
+<script src="/cart.js"></script>
+<link href="/LoginPage.css" rel="stylesheet" type="text/css" />
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -89,10 +91,10 @@
 							<button class="btn btn-primary dropdown-toggle" type="button"
 								data-toggle="dropdown">${user.username}</button>
 							<ul class="dropdown-menu ml-auto" style="list-style-type: none;">
-								<li style="padding: 10px;"><a href="/account/userpage">your
+								<li style="padding: 10px;"><a href="/account/userpage">My
 										Account</a></li>
-								<li style="padding: 10px;"><a
-									href="fc/?page=Logout&type=model">your Orders</a></li>
+								<li style="padding: 10px;"><a href="/account/orders">My
+										Orders</a></li>
 								<li style="padding: 10px;"><a href="/account/logout">logout</a></li>
 							</ul>
 
@@ -232,8 +234,8 @@
 							<div class="modal-header">
 								<h4 class="modal-title"></h4>
 								<button type="button" class="fade" data-dismiss="modal">&times;</button>
-								<button type="button" class="btn btn-primary btn-lg"
-									style="float: left;">Login</button>
+								<!-- 								<button type="button" class="btn btn-primary btn-lg" -->
+								<!-- 									style="float: left;">Login</button> -->
 							</div>
 							<!-- Modal body -->
 							<div class="modal-body">
@@ -284,8 +286,8 @@
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="fade" data-dismiss="modal">&times;</button>
-								<button type="button" class="btn btn-primary btn-lg"
-									style="float: left">Registration</button>
+								<!-- 								<button type="button" class="btn btn-primary btn-lg" -->
+								<!-- 									style="float: left">Registration</button> -->
 							</div>
 							<div class="modal-body">
 								<form action="/account/signup" method="post">
@@ -326,14 +328,12 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12"
 					style="padding: 2px;">
 					<div class="w3-content w3-section"
-						style="max-width: 100%; height: 300px;">
-						<img class="mySlides"
-							src="/E-Commerce/images/fun-swimming-products.jpg"
-							style="width: 100%; height: 300px;"> <img class="mySlides"
-							src="/E-Commerce/images/wrist-watches.jpg"
-							style="width: 100%; height: 300px;"> <img class="mySlides"
-							src="/E-Commerce/images/malte-wingen-PDX_a_82obo-unsplash.jpg"
-							style="width: 100%; height: 300px;">
+						style="max-width: 100%; height: 400px;">
+						<img class="mySlides" src="/img/display/image.jpg"
+							style="width: 100%; height: 400px;"> <img class="mySlides"
+							src="/img/display/image2.jpg" style="width: 100%; height: 400px;">
+						<img class="mySlides" src="/img/display/img5.jpg"
+							style="width: 100%; height: 400px;">
 					</div>
 				</div>
 			</div>
@@ -343,59 +343,59 @@
 			<div class="row" style="background-color: #efefef">
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shirt/red-t-shirt.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/t1.png"> <img class="card-img-top"
+							src="/img/display/t1.png" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body  btn btn-primary btn btn-sm"
+							onclick="addTo('t1.png')">
+							ADD TO BAG
 							<h style="color: black">$10 Red T-Shirt</h>
 						</div>
+
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shirt/blank-colored-t-shirts.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/t2.jpg"> <img class="card-img-top"
+							src="/img/display/t2.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('t2.jpg')">
+							ADD TO BAG
 							<h style="color: black">$13 Shirts</h>
 						</div>
+
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shirt/purple-t-shirt.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/t3.jpg"> <img class="card-img-top"
+							src="/img/display/t3.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('t3.jpg')">
+							ADD TO BAG
 							<h style="color: black">$20 Voilet T-Shirt</h>
 						</div>
+
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shirt/cobalt-blue-t-shirt.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/t4.jpg"> <img class="card-img-top"
+							src="/img/display/t4.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('t4.jpg')">
+							ADD TO BAG</a>
 							<h style="color: black">$15 Blue T-Shirt</h>
+
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -404,55 +404,52 @@
 			<div class="row" style="background-color: #efefef">
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/jwl/galaxy-earrings.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/j1.jpg"> <img class="card-img-top"
+							src="/img/display/j1.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('j1.jpg')">
+							ADD TO BAG
 							<h style="color: black">$25 blue Earring</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top" src="/E-Commerce/images/jwl/chain.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/j2.jpg"> <img class="card-img-top"
+							src="/img/display/j2.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('j2.jpg')">
+							ADD TO BAG
 							<h style="color: black">$30 chain</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/jwl/boho-earrings.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/j3.jpg"> <img class="card-img-top"
+							src="/img/display/j3.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('j3.jpg')">
+							ADD TO BAG
 							<h style="color: black">$35 Earring</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/jwl/braceltes.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/j4.jpg"> <img class="card-img-top"
+							src="/img/display/j4.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('j4.jpg')">
+							ADD TO BAG
 							<h style="color: black">$25 bracelet</h>
 						</div>
 					</div>
@@ -464,58 +461,54 @@
 			<div class="row" style="background-color: #efefef">
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/electronics/24640266-group-of-household-appliances-on-a-white-background.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/e1.png"> <img class="card-img-top"
+							src="/img/display/e1.png" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
-							<h style="color: black">$100 Washing Machine</h>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('e1.png')">
+							ADD TO BAG
+							<h style="color: black">$100 Speaker</h>
 
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/electronics/two-computer-flat-screen-monitors-turned-on-777001.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/e2.jpg"> <img class="card-img-top"
+							src="/img/display/e2.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
-							<h style="color: black">$300 Television</h>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('e2.jpg')">
+							ADD TO BAG
+							<h style="color: black">$300 iPhone</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/electronics/mackBook.jpeg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/e3.jpg"> <img class="card-img-top"
+							src="/img/display/e3.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
-							<h style="color: black">$2000 MacBook Air</h>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('e3.jpg')">
+							ADD TO BAG
+							<h style="color: black">$2000 Mac Air</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/electronics/microwave.jpg"
-							alt="Card image" style="width: 100%; height: auto;">
+						<a href="/img/details/e4.jpg"> <img class="card-img-top"
+							src="/img/display/e4.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
-							<h style="color: black">$120 MicroWave</h>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('e4.jpg')">
+							ADD TO BAG
+							<h style="color: black">$120 machine</h>
 						</div>
 					</div>
 				</div>
@@ -526,57 +519,53 @@
 			<div class="row" style="background-color: #efefef">
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shoes/shoes4.jpeg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/s1.png"> <img class="card-img-top"
+							src="/img/display/s1.png" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('s1.png')">
+							ADD TO BAG
 							<h style="color: black">$20 Casual Shoes</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shoes/adidas.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/s2.jpg"> <img class="card-img-top"
+							src="/img/display/s2.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('s2.jpg')">
+							ADD TO BAG
 							<h style="color: black">$80 Adidas Shoes</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shoes/shoes1.jpg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/s3.png"> <img class="card-img-top"
+							src="/img/display/s3.png" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('s3.png')">
+							ADD TO BAG
 							<h style="color: black">$40 Puma Shoes</h>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-lg-3 col-md-3 col-3">
 					<div class="card" style="width: 100%;">
-						<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics">
-							<img class="card-img-top"
-							src="/E-Commerce/images/shoes/shoes2.jpeg" alt="Card image"
-							style="width: 100%; height: auto;">
+						<a href="/img/details/s4.jpg"> <img class="card-img-top"
+							src="/img/display/s4.jpg" alt="Card image"
+							style="width: 100%; height: 300px;">
 						</a>
-						<div class="card-body">
-							<a href="fc/?page=AddToCart&type=model&pid=123&cat=Electronics"
-								class="btn btn-primary btn btn-sm">Buy</a>
-							<h style="color: black">$120 Adidas Casual Shoes</h>
+						<div class="card-body btn btn-primary btn btn-sm"
+							onclick="addTo('s4.jpg')">
+							ADD TO BAG
+							<h style="color: black">$120 Casual Shoes</h>
 						</div>
 					</div>
 				</div>

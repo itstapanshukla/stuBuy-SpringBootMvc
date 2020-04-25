@@ -7,7 +7,7 @@
 <title>JSP Page</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link href="src/main/webapp/WEB-INF/CSS/LoginPage.css" rel="stylesheet"
+<link href="/LoginPage.css" rel="stylesheet"
 	type="text/css" />
 <!-- jQuery library -->
 <script
@@ -165,7 +165,7 @@
 					<form action="/E-Commerce/fc/?page=ForgetPassword&type=model"
 						method="post">
 						<br> <input class="form-control " id="eid"
-							placeholder="user id" onblur="loginVerify('eid', 'sid')"
+							placeholder="Enter Email Id For Reset Password" onblur="loginVerify('eid', 'sid')"
 							type="text" name="email"><span id="sid"></span><br>
 						<input type="submit" name="login" class="btn btn-primary ">
 

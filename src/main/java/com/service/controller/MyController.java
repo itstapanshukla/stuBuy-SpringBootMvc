@@ -7,12 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.service.DataBaseServices;
 import com.service.LoginModel;
+import com.service.accountdetails.Cart;
 import com.service.accountdetails.LoginAccount;
 import com.service.mailservices.MailSenderUtility;
 
@@ -36,13 +38,14 @@ public class MyController {
 
 	@PostMapping("/login")
 	public String myPage(@RequestParam("useremail") String useremail, @RequestParam("password") String password,
-			Model andView) {
+			Model andView, HttpSession session) {
 		LoginAccount account = new LoginAccount();
 		account.setUseremail(useremail);
 		account.setPassword(password);
 		if (login.login(account) != null) {
 			account = login.login(account);
 			andView.addAttribute("user", account);
+			session.setAttribute("user", account);
 			return "homepage";
 		}
 		return "home";
@@ -80,4 +83,22 @@ public class MyController {
 		return "userpage";
 
 	}
+
+	@GetMapping("/addcart/{id}")
+	public void addTOCart(@PathVariable("id") String id, HttpSession session) {
+		System.out.println("add cart");
+		Cart cart = new Cart();
+		LoginAccount login;
+		login = (LoginAccount) session.getAttribute("user");
+		cart.setProductId(id);
+		cart.setAccount(login);
+		service.addTOCart(cart);
+
+	}
+
+	@GetMapping("/orders")
+	public String userOrders() {
+		return "userorders";
+	}
+
 }

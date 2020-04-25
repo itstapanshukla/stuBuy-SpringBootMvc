@@ -2,11 +2,9 @@ package com.service.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.service.accountdetails.LoginAccount;
+import com.service.accountdetails.Cart;
 
 @Repository
-public interface LoginRepo extends JpaRepository<LoginAccount, String> {
-
-	LoginAccount getOne(String id);
+public interface CartRepo extends JpaRepository<Cart, Integer> {
 
 }
