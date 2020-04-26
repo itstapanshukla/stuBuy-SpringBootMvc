@@ -168,9 +168,6 @@
                         
                                             </textarea>
 												</div>
-
-
-
 												<form method="post" action="fc/?page=ImageUpload&type=model"
 													enctype="multipart/form-data">
 													<input type="file" name="file" /><br> <input

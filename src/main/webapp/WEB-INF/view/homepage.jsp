@@ -570,9 +570,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="row" style="height: 20px; width: 100%;"></div>
-			<%-- complete --%>
-			<%-- }--%>
+			<div class="row" style="height: 20px; width: 100%;">
+				<c:forEach var="product" items="${product}" varStatus="status">
+					<div class="col-sm-3 col-lg-3 col-md-3 col-3">
+						<div class="card" style="width: 100%;">
+							<a href="/img/details/${product.productName}"> <img
+								class="card-img-top" src="/img/display/${product.productName}"
+								alt="Card image" style="width: 100%; height: 300px;">
+							</a>
+							<div class="card-body btn btn-primary btn btn-sm"
+								onclick="addTo(${product.productName})">
+								ADD TO BAG
+								<h style="color: black">${product.productPrice}</h>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
 		</div>
 	</div>
 	<script>

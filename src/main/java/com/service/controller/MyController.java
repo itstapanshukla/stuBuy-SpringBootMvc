@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.service.DataBaseServices;
 import com.service.LoginModel;
+import com.service.ProductDetails;
 import com.service.accountdetails.Cart;
 import com.service.accountdetails.LoginAccount;
 import com.service.mailservices.MailSenderUtility;
@@ -35,6 +36,8 @@ public class MyController {
 
 	@GetMapping("/home")
 	public String homePage(Model andView) {
+		List<ProductDetails> product = service.getAllproduct();
+		andView.addAttribute("product", product);
 		return "homepage";
 	}
 
