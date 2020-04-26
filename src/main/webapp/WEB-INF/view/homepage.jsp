@@ -93,8 +93,8 @@
 							<ul class="dropdown-menu ml-auto" style="list-style-type: none;">
 								<li style="padding: 10px;"><a href="/account/userpage">My
 										Account</a></li>
-								<li style="padding: 10px;"><a href="/account/orders">My
-										Orders</a></li>
+								<li style="padding: 10px;"><a
+									href="/account/orders/${user.useremail}">My Orders</a></li>
 								<li style="padding: 10px;"><a href="/account/logout">logout</a></li>
 							</ul>
 

@@ -1,5 +1,7 @@
 package com.service.controller;
 
+import java.util.List;
+
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpSession;
 
@@ -86,18 +88,20 @@ public class MyController {
 
 	@GetMapping("/addcart/{id}")
 	public void addTOCart(@PathVariable("id") String id, HttpSession session) {
-		System.out.println("add cart");
 		Cart cart = new Cart();
 		LoginAccount login;
 		login = (LoginAccount) session.getAttribute("user");
 		cart.setProductId(id);
 		cart.setAccount(login);
+		cart.setUserId(login.getUseremail());
 		service.addTOCart(cart);
 
 	}
 
-	@GetMapping("/orders")
-	public String userOrders() {
+	@GetMapping("/orders/{id}")
+	public String userOrders(@PathVariable("id") String id, Model model) {
+		List<Cart> listOfCarts = service.geAllItems(id);
+		model.addAttribute("listOfCarts", listOfCarts);
 		return "userorders";
 	}
 

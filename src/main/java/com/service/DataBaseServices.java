@@ -30,4 +30,10 @@ public class DataBaseServices {
 		cartrepo.save(cart);
 	}
 
+	public List<Cart> geAllItems(String id) {
+		List<Cart> list = cartrepo.findByuserId(id);
+		return list;
+
+	}
+
 }

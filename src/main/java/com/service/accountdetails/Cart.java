@@ -16,6 +16,8 @@ public class Cart {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String productId;
+	private String userId;
+	
 	@OneToOne
 	private LoginAccount account;
 
@@ -41,6 +43,14 @@ public class Cart {
 
 	public void setAccount(LoginAccount account) {
 		this.account = account;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 }
